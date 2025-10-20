@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geovani dos Santos - AI, Data Science & Cybersecurity Consultant</title>
+    <!-- Favicons: explicit sizes for better compatibility -->
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicons/favicon-16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicons/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="./assets/favicons/favicon-48.png">
+    <link rel="shortcut icon" href="./assets/favicons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="192x192" href="./assets/favicons/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="./assets/favicons/android-chrome-512x512.png">
+    <link rel="mask-icon" href="./assets/favicons/favicon-32.png" color="#06B6D4">
+    <!-- Tailwind (built output). If you don't build locally, the CDN below will provide Tailwind for quick preview. -->
+    <link rel="stylesheet" href="./css/output.css">
+    <script>
+        // Quick dev fallback: load Tailwind CDN if output.css is not available (helps preview without npm)
+        (function(){
+            var xhr = new XMLHttpRequest();
+            xhr.open('HEAD', './css/output.css', true);
+            xhr.onreadystatechange = function(){
+                if (xhr.readyState === 4 && xhr.status === 404){
+                    var s = document.createElement('script');
+                    s.src = 'https://cdn.tailwindcss.com';
+                    s.defer = true;
+                    document.head.appendChild(s);
+                }
+            };
+            xhr.send();
+        })();
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/custom.css">
+    <!-- Web manifest and theme -->
+    <link rel="manifest" href="./assets/site.webmanifest">
+    <meta name="theme-color" content="#0B1426">
+    <!-- Windows tile configuration -->
+    <meta name="msapplication-TileColor" content="#0B1426">
+    <meta name="msapplication-config" content="./assets/browserconfig.xml">
+</head>
+<body class="bg-deep-blue text-white font-sans">
+    <a class="skip-link sr-only" href="#main">Skip to content</a>
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-deep-blue/90 backdrop-blur-md z-50 border-b border-trust-blue/20">
+        <div class="max-w-6xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-xl font-bold text-neon-cyan">Geovani dos Santos</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-neon-cyan transition-colors">Home</a>
+                    <a href="#about" class="hover:text-neon-cyan transition-colors">About</a>
+                    <a href="#services" class="hover:text-neon-cyan transition-colors">Services</a>
+                    <a href="#projects" class="hover:text-neon-cyan transition-colors">Projects</a>
+                    <a href="#publications" class="hover:text-neon-cyan transition-colors">Publications</a>
+                    <a href="#contact" class="hover:text-neon-cyan transition-colors">Contact</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-neon-cyan" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
+                <a href="#home" class="block py-2 hover:text-neon-cyan transition-colors">Home</a>
+                <a href="#about" class="block py-2 hover:text-neon-cyan transition-colors">About</a>
+                <a href="#services" class="block py-2 hover:text-neon-cyan transition-colors">Services</a>
+                <a href="#projects" class="block py-2 hover:text-neon-cyan transition-colors">Projects</a>
+                <a href="#publications" class="block py-2 hover:text-neon-cyan transition-colors">Publications</a>
+                <a href="#contact" class="block py-2 hover:text-neon-cyan transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="min-h-full gradient-bg circuit-pattern flex items-center pt-20">
+            <div class="max-w-6xl mx-auto px-6 py-20">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-8">
+                        <h1 class="text-5xl md:text-6xl font-bold leading-tight fade-in">
+                            Building a <span class="text-neon-cyan">Secure</span>, 
+                            <span class="text-emerald">Intelligent</span>, and 
+                            <span class="text-neon-purple">Ethical</span> Future
+                        </h1>
+                        <p class="text-xl text-gray-300 leading-relaxed fade-in stagger-1">
+                            Empowering organizations through the intersection of AI, Data Science, and Cybersecurity — 
+                            where technology meets ethics and humanity.
+                        </p>
+                        <div class="flex flex-wrap gap-4 fade-in stagger-2">
+                            <a href="#about" class="bg-neon-cyan text-deep-blue px-8 py-3 rounded-lg font-semibold hover:bg-neon-cyan/90 transition-colors">
+                                Explore My Mission
+                            </a>
+                            <a href="#contact" class="border border-neon-cyan text-neon-cyan px-8 py-3 rounded-lg font-semibold hover:bg-neon-cyan/10 transition-colors">
+                                Let's Connect
+                            </a>
+                        </div>
+                </div>
+                    <div class="flex justify-center fade-in stagger-3">
+                        <div class="relative avatar-outer">
+                            <div class="avatar-ring-outer" aria-hidden="true"></div>
+                            <div class="avatar-ring-inner" aria-hidden="true"></div>
+                            <img src="./assets/avatar.png" alt="Geovani dos Santos" class="avatar-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-trust-blue/20">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold mb-6">About Geovani</h2>
+                    <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                        A forward-thinking professional consultant embodying the intersection of technology, ethics, and humanity
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-12 mb-16">
+                    <div class="space-y-6">
+                        <h3 class="text-2xl font-semibold text-neon-cyan">Mission Statement</h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            To empower organizations to make technology more ethical, inclusive, and impactful for society. 
+                            I combine a hacker mindset with transformational leadership and a deep commitment to security, 
+                            innovation, and sustainability.
+                        </p>
+                        <h3 class="text-2xl font-semibold text-emerald">Personal Journey</h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            From Fortaleza to global impact — connecting human purpose with technological excellence. 
+                            My journey represents the bridge between cutting-edge technology and meaningful human progress.
+                        </p>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <h3 class="text-2xl font-semibold text-neon-purple">Guiding Values</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-deep-blue/50 p-4 rounded-lg border border-neon-cyan/20">
+                                <div class="text-neon-cyan font-semibold">Integrity</div>
+                                <div class="text-sm text-gray-400">Ethical foundation</div>
+                            </div>
+                            <div class="bg-deep-blue/50 p-4 rounded-lg border border-emerald/20">
+                                <div class="text-emerald font-semibold">Curiosity</div>
+                                <div class="text-sm text-gray-400">Continuous learning</div>
+                            </div>
+                            <div class="bg-deep-blue/50 p-4 rounded-lg border border-neon-purple/20">
+                                <div class="text-neon-purple font-semibold">Inclusivity</div>
+                                <div class="text-sm text-gray-400">Technology for all</div>
+                            </div>
+                            <div class="bg-deep-blue/50 p-4 rounded-lg border border-neon-cyan/20">
+                                <div class="text-neon-cyan font-semibold">Innovation</div>
+                                <div class="text-sm text-gray-400">Future-focused</div>
+                            </div>
+                            <div class="bg-deep-blue/50 p-4 rounded-lg border border-emerald/20">
+                                <div class="text-emerald font-semibold">Sustainability</div>
+                                <div class="text-sm text-gray-400">Long-term impact</div>
+                            </div>
+                            <div class="bg-deep-blue/50 p-4 rounded-lg border border-neon-purple/20">
+                                <div class="text-neon-purple font-semibold">Resilience</div>
+                                <div class="text-sm text-gray-400">Adaptive strength</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold mb-6">Services</h2>
+                    <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                        Helping organizations anticipate and adapt to technological change through strategic consulting
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-deep-blue/50 p-8 rounded-xl border border-neon-cyan/20 card-hover">
+                        <div class="text-neon-cyan text-4xl mb-4">🤖</div>
+                        <h3 class="text-xl font-semibold mb-4 text-neon-cyan">Ethical AI & Data Strategy</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed">
+                            Developing responsible AI frameworks that align with organizational values and societal impact goals.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-deep-blue/50 p-8 rounded-xl border border-emerald/20 card-hover" data-project="viabilizai" tabindex="0">
+                        <div class="text-emerald text-4xl mb-4">🛡️</div>
+                        <h3 class="text-xl font-semibold mb-4 text-emerald">Cybersecurity Awareness</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed">
+                            Blue team defense strategies and security awareness programs that protect while enabling innovation.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-deep-blue/50 p-8 rounded-xl border border-neon-purple/20 card-hover">
+                        <div class="text-neon-purple text-4xl mb-4">🚀</div>
+                        <h3 class="text-xl font-semibold mb-4 text-neon-purple">Digital Transformation</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed">
+                            Leadership development programs that bridge technology adoption with human-centered change management.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-deep-blue/50 p-8 rounded-xl border border-neon-cyan/20 card-hover">
+                        <div class="text-neon-cyan text-4xl mb-4">🔮</div>
+                        <h3 class="text-xl font-semibold mb-4 text-neon-cyan">Future Readiness</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed">
+                            Strategic workshops helping organizations prepare for emerging technologies and market disruptions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 bg-trust-blue/20">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold mb-6">Projects</h2>
+                    <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                        Initiatives that demonstrate the power of technology aligned with social impact
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-deep-blue/50 p-8 rounded-xl border border-emerald/20 card-hover">
+                        <div class="flex items-center mb-4">
+                            <div class="text-emerald text-3xl mr-4">🌟</div>
+                            <h3 class="text-2xl font-semibold text-emerald">ViabilizAI</h3>
+                        </div>
+                        <p class="text-gray-300 mb-4 leading-relaxed">
+                            A groundbreaking program enabling social mobility through AI sponsorship, connecting underrepresented 
+                            communities with cutting-edge technology education and opportunities.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-emerald/20 text-emerald px-3 py-1 rounded-full text-sm">AI Education</span>
+                            <span class="bg-neon-cyan/20 text-neon-cyan px-3 py-1 rounded-full text-sm">Social Impact</span>
+                            <span class="bg-neon-purple/20 text-neon-purple px-3 py-1 rounded-full text-sm">Mentorship</span>
+                        </div>
+                        <div class="text-sm text-gray-400">
+                            <strong>Impact:</strong> Empowering the next generation of ethical AI practitioners
+                        </div>
+                    </div>
+                    
+                    <div class="bg-deep-blue/50 p-8 rounded-xl border border-neon-cyan/20 card-hover">
+                        <div class="flex items-center mb-4">
+                            <div class="text-neon-cyan text-3xl mr-4">🔒</div>
+                            <h3 class="text-2xl font-semibold text-neon-cyan">Ethical Security Framework</h3>
+                        </div>
+                        <p class="text-gray-300 mb-4 leading-relaxed">
+                            Developing comprehensive cybersecurity frameworks that balance protection with privacy, 
+                            ensuring security measures enhance rather than restrict human potential.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-neon-cyan/20 text-neon-cyan px-3 py-1 rounded-full text-sm">Cybersecurity</span>
+                            <span class="bg-emerald/20 text-emerald px-3 py-1 rounded-full text-sm">Privacy</span>
+                            <span class="bg-neon-purple/20 text-neon-purple px-3 py-1 rounded-full text-sm">Ethics</span>
+                        </div>
+                        <div class="text-sm text-gray-400">
+                            <strong>Focus:</strong> Human-centered security that protects without constraining
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section id="publications" class="py-20">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold mb-6">Publications & Thought Leadership</h2>
+                    <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                        Insights on AI ethics, data governance, and cybersecurity awareness
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <article class="bg-deep-blue/50 p-6 rounded-xl border border-neon-cyan/20 card-hover">
+                        <div class="text-neon-cyan text-2xl mb-3">📝</div>
+                        <h3 class="text-lg font-semibold mb-3 text-neon-cyan">The Future of Ethical AI</h3>
+                        <p class="text-gray-300 text-sm mb-4 leading-relaxed">
+                            Exploring how organizations can implement AI systems that prioritize human welfare and societal benefit.
+                        </p>
+                        <div class="text-xs text-gray-400">Published on LinkedIn</div>
+                    </article>
+                    
+                    <article class="bg-deep-blue/50 p-6 rounded-xl border border-emerald/20 card-hover">
+                        <div class="text-emerald text-2xl mb-3">🔐</div>
+                        <h3 class="text-lg font-semibold mb-3 text-emerald">Cybersecurity in the Age of AI</h3>
+                        <p class="text-gray-300 text-sm mb-4 leading-relaxed">
+                            How artificial intelligence is reshaping cybersecurity landscapes and defense strategies.
+                        </p>
+                        <div class="text-xs text-gray-400">Featured on Hub Hackers do Bem</div>
+                    </article>
+                    
+                    <article class="bg-deep-blue/50 p-6 rounded-xl border border-neon-purple/20 card-hover">
+                        <div class="text-neon-purple text-2xl mb-3">🌍</div>
+                        <h3 class="text-lg font-semibold mb-3 text-neon-purple">Technology for Social Good</h3>
+                        <p class="text-gray-300 text-sm mb-4 leading-relaxed">
+                            Bridging the gap between technological innovation and meaningful social impact initiatives.
+                        </p>
+                        <div class="text-xs text-gray-400">Industry Whitepaper</div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-trust-blue/20">
+            <div class="max-w-4xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold mb-6">Let's Shape the Future Together</h2>
+                    <p class="text-xl text-gray-300">
+                        Ready to explore how technology and ethics can transform your organization?
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-2xl font-semibold mb-4 text-neon-cyan">Get in Touch</h3>
+                            <p class="text-gray-300 leading-relaxed mb-6">
+                                Whether you're looking to implement ethical AI, strengthen your cybersecurity posture, 
+                                or lead digital transformation initiatives, I'm here to help guide your journey.
+                            </p>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <a href="https://linkedin.com/in/geovanids" target="_blank" rel="noopener noreferrer" 
+                               class="flex items-center space-x-3 text-neon-cyan hover:text-neon-cyan/80 transition-colors">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                </svg>
+                                <span>Connect on LinkedIn</span>
+                            </a>
+                            
+                            <div class="flex items-center space-x-3 text-emerald">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                                <span>geovanis.business@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium mb-2">Name</label>
+                            <input type="text" id="name" name="name" required
+                                   class="w-full px-4 py-3 bg-deep-blue/50 border border-neon-cyan/20 rounded-lg focus:border-neon-cyan focus:outline-none transition-colors">
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-sm font-medium mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" required
+                                      class="w-full px-4 py-3 bg-deep-blue/50 border border-neon-cyan/20 rounded-lg focus:border-neon-cyan focus:outline-none transition-colors resize-none"></textarea>
+                        </div>
+
+                        <button type="submit" 
+                                class="w-full bg-neon-cyan text-deep-blue py-3 rounded-lg font-semibold hover:bg-neon-cyan/90 transition-colors">
+                            Send Message
+                        </button>
+
+                        <div id="form-message" class="hidden text-center p-4 rounded-lg"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-trust-blue/20">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <div class="text-2xl font-bold text-neon-cyan mb-4">Geovani dos Santos</div>
+            <p class="text-gray-400 mb-6">
+                Building a secure, intelligent, and ethical future through technology
+            </p>
+            <div class="text-sm text-gray-500">
+                © 2025 Geovani dos Santos. Empowering organizations through ethical technology.
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/main.js" defer></script>
+    <!-- Project modal -->
+    <div id="project-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-backdrop" data-close></div>
+        <div class="modal-panel" role="document">
+            <button class="modal-close" aria-label="Close project details" data-close>&times;</button>
+
+            <div class="modal-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;align-items:start">
+                <div class="modal-media">
+                    <img id="modal-image" src="" alt="" style="width:100%;border-radius:.75rem;display:block;object-fit:cover;max-height:320px;" />
+                </div>
+                <div class="modal-body">
+                    <h3 id="modal-title" class="text-2xl font-bold text-neon-cyan">Project Title</h3>
+                    <p id="modal-desc" class="text-gray-300 mt-4">Project short description goes here.</p>
+                    <ul id="modal-features" class="mt-4 text-gray-300 list-disc list-inside"></ul>
+                    <div id="modal-actions" class="mt-6"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

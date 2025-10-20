@@ -1,0 +1,25 @@
+{
+  "name": "geovani-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio for Geovani dos Santos — AI, Data Science & Cybersecurity Consultant",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -i ./css/styles.css -o ./css/output.css --minify",
+    "dev:css": "tailwindcss -i ./css/styles.css -o ./css/output.css --watch",
+    "start": "npx http-server . -c-1 -p 5000",
+    "gen:favicons": "node ./scripts/generate-favicons.js ./assets/avatar.png ./assets/favicons",
+    "start:app": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemailer": "^6.9.3",
+    "helmet": "^6.0.1",
+    "cors": "^2.8.5",
+    "twilio": "^4.12.0"
+  },
+  "devDependencies": {
+  "tailwindcss": "^3.4.8",
+    "sharp": "^0.32.0",
+    "png-to-ico": "^1.0.0"
+  }
+}
